@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cars</title>
+</head>
+<body>
+
+<h1>Today for sale:</h1>
+<th:block th:each="car : ${carsList}">
+  <div th:text="${car.getManufacturer()}+' for sale just for ' + ${car.getPrice()}+'!'"/>
+</th:block>
+
+</body>
+</html>
